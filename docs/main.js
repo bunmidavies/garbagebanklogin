@@ -3,6 +3,7 @@ function _(x){
 }
 
 function login(){
+    loggedin=false;
     user = _("user").value;
     pass = _("pw").value;
     $.get('logins.txt', function(data) {
