@@ -7,8 +7,12 @@ function login(){
     pass = _("pw").value;
     $.get('logins.txt', function(data) {
         data = data.split("\n");
-        if(data[0] == "ey"){
-            console.log("ree");
+        for(var i=0;i<data.length;i++){
+            if(user==data[i]){
+                if(pass==data[i+1]){
+                    console.log("logged in.")
+                }
+            }
         }
      }, 'text');
     if(user == "ree" && pass=="nig"){
