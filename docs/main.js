@@ -11,17 +11,13 @@ function login(){
             if(user==data[i]){
                 if(pass==data[i+1]){
                     console.log("logged in.")
+                    loggedin=true;
+                    _("details").innerHTML = "You have "+data[i+2]+" clout tokens.";
                 }
             }
         }
      }, 'text');
-    if(user == "ree" && pass=="nig"){
-        console.log("logged in.")
-        _("details").innerHTML = "You have 30 clout tokens.";
-        
-    }
-    else{
-        console.log("failed.")
-        _("details").innerHTML = "";
-    }
+     if(loggedin==false){
+         _("details").innerHTML = "Login failed.";
+     }
 }
